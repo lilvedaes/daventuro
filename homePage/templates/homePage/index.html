@@ -5,11 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    {% load static %}
+    <!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="{% static 'general/favicon.ico' %}">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="{% static 'general/favicon.ico' %}">
+	<link rel="icon" type="image/png" sizes="196x196" href="{% static 'general/favicon-192.png' %}">
+	<link rel="icon" type="image/png" sizes="160x160" href="{% static 'general/favicon-160.png' %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'general/favicon-96.png' %}">
+	<link rel="icon" type="image/png" sizes="64x64" href="{% static 'general/favicon-64.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'general/favicon-32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'general/favicon-16.png' %}">
+	<link rel="apple-touch-icon" href="{% static 'general/favicon-57.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'general/favicon-114.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'general/favicon-72.png' %}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'general/favicon-144.png' %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'general/favicon-60.png' %}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{% static 'general/favicon-120.png' %}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'general/favicon-76.png' %}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{% static 'general/favicon-152.png' %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'general/favicon-180.png' %}">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="{% static 'general/favicon-144.png' %}">
+	<meta name="msapplication-config" content="{% static 'general/browserconfig.xml' %}">
+	<!-- ****** faviconit.com favicons ****** -->
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'homePage/style.css' %}">
 
     <title>Daniela Venturo Esaine</title>
@@ -56,7 +79,6 @@
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
                 <a id="duck" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank">
-                    {% load static %}
                     <img src="{% static 'general/rubber-duck.png' %}" alt="Rubber Duck">
                 </a>
                 <div class="duck-shadow"></div>
