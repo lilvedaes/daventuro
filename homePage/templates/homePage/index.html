@@ -55,8 +55,10 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
-                <a id="duck" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank"><img
-                        src="https://daventuro-static.s3.amazonaws.com/general/rubber-duck.png" alt="Rubber Duck"></a>
+                <a id="duck" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank">
+                    {% load static %}
+                    <img src="{% static 'general/rubber-duck.png' %}" alt="Rubber Duck">
+                </a>
                 <div class="duck-shadow"></div>
                 <h1 class="font-weight-light">Daniela Venturo Esaine</h1>
                 <p class="lead">Computer Science student at the University of Toronto</p>
