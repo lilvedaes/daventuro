@@ -1,0 +1,68 @@
+@keyframes float {
+  0% {
+    transform: translateY(-1em) rotate(10deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-1em) rotate(-10deg);
+  }
+}
+
+@keyframes shadow {
+	0% {
+        width: 100px;
+		box-shadow: 0px 10px 8px rgba(0,0,0,.8);
+	}
+	50% {
+        width: 80px;
+		box-shadow: 0px 10px 8px rgba(0,0,0,.5);
+	}
+	100% {
+        width: 100px;
+		box-shadow: 0px 10px 8px rgba(0,0,0,.8);
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #0093c4;
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  color: white;
+  background-color: #4fc3f7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  background-color: white;
+}
+
+.fa {
+  padding: 0 0.2em 0 0.2em;
+  color: white;
+}
+
+.fa:hover {
+  color: #0093c4;
+}
+
+#duck img {
+  animation: float 1.5s ease-out infinite alternate;
+}
+
+.duck-shadow {
+  height: 2px;
+  display: block;
+  margin: 15px auto;
+  animation: 1.5s infinite alternate shadow;
+}

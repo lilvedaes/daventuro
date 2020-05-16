@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homePage/style.css' %}">
+
+    <title>Daniela Venturo Esaine</title>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">D.V.E.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experiences">Experiences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead rellax" data-rellax-speed="-7">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <a id="duck" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank"><img
+                        src="https://daventuro-static.s3.amazonaws.com/general/rubber-duck.png" alt="Rubber Duck"></a>
+                <div class="duck-shadow"></div>
+                <h1 class="font-weight-light">Daniela Venturo Esaine</h1>
+                <p class="lead">Computer Science student at the University of Toronto</p>
+                <a href="https://www.linkedin.com/in/daniela-venturo-esaine/" target="_blank"><i
+                        class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                <a href="https://github.com/lilvedaes" target="_blank"><i class="fa fa-github-square fa-3x"
+                                                                          aria-hidden="true"></i></a>
+                <a href="mailto: daventuro@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x"
+                                                                         aria-hidden="true"></i></a>
+                <a href="" target="_blank"><i class="fa fa-file-text fa-3x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content rellax" data-rellax-speed="1">
+    <!-- About -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="font-weight-light">About</h2>
+
+            <!-- My Story -->
+            <div class="container">
+                <h4 class="font-weight-light">My Story</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi
+                    officiis blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim
+                    fugiat reprehenderit expedita.</p>
+            </div>
+
+            <!-- Education -->
+            <div class="container">
+                <h4 class="font-weight-light">Education</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi
+                    officiis blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim
+                    fugiat reprehenderit expedita.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="font-weight-light">Skills</h2>
+            {% if skills_list %}
+                <ul>
+                    {% for skill in skills_list %}
+                        <li>{{ skill.name }}
+                            <ul>
+                                <li><img src="{{ skill.icon.url }}" alt="{{ skill.name }}"></li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No skills are available.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!--    Projects    -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="font-weight-light">Projects</h2>
+            {% if project_list %}
+                <ul>
+                    {% for project in project_list %}
+                        <li>{{ project.name }}
+                            <ul>
+                                <li><img src="{{ project.picture.url }}" alt="{{ project.name }}"></li>
+                                <li>{{ project.description }}</li>
+                                <li>
+                                    Skills
+                                    <ul>
+                                        {% for skill in project.skills.all %}
+                                            <li>{{ skill.name }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                {# If team, repository, or link are - then don't display them #}
+                                {% ifnotequal project.team "-" %}
+                                    <li>{{ project.team }}</li>
+                                {% endifnotequal %}
+
+                                {% ifnotequal project.repository "-" %}
+                                    <li>{{ project.repository }}</li>
+                                {% endifnotequal %}
+
+                                {% ifnotequal project.link "-" %}
+                                    <li>{{ project.link }}</li>
+                                {% endifnotequal %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No projects are available.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Experiences -->
+    <section id="experiences" class="py-5">
+        <div class="container">
+            <h2 class="font-weight-light">Experiences</h2>
+            {# EXPERIENCES #}
+            {% if experience_list %}
+                <ul>
+                    {% for experience in experience_list %}
+                        <li>{{ experience.name }}
+                            <ul>
+                                <li>{{ experience.company }}</li>
+                                <li>{{ experience.start_date }}</li>
+                                <li>{{ experience.end_date }}</li>
+                                <li>{{ experience.description }}</li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No experiences are available.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="font-weight-light">Contact</h2>
+        </div>
+    </section>
+</div>
+
+<footer>
+
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+{#    To achieve parallax effect    #}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+
+<script>
+    var rellax = new Rellax('.rellax');
+</script>
+</body>
+</html>
