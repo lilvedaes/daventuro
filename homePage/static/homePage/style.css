@@ -66,3 +66,9 @@ nav {
   margin: 15px auto;
   animation: 1.5s infinite alternate shadow;
 }
+
+.skill {
+    text-align: center;
+    align-content: center;
+    font-size: medium;
+}
