@@ -173,11 +173,11 @@
                         <div class="col-lg-4 col-sm-6 mb-4 flip-card">
                             <div class="flip-card-inner">
                                 <div class="card h-100 flip-card-front">
-                                    <a href="{{ project.link }}"><img class="card-img-top" src="{{ project.picture.url }}"
+                                    <a href="http://{{ project.link }}"><img class="card-img-top" src="{{ project.picture.url }}"
                                                      alt="{{ project.name }}"></a>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="{{ project.link }}">{{ project.name }}</a>
+                                            <a href="http://{{ project.link }}">{{ project.name }}</a>
                                         </h4>
                                         <p class="card-text">{{ project.description }}</p>
                                     </div>
@@ -198,14 +198,14 @@
                                         <div class="link-container">
                                             <div class="repository-link">
                                                 {% ifnotequal project.repository "#" %}
-                                                    <a href="{{ project.repository }}" target="_blank">
+                                                    <a href="http://{{ project.repository }}" target="_blank">
                                                         <img src="{% static 'general/icons8-git-24.png' %}" alt="Rubber Duck">
                                                     </a>
                                                 {% endifnotequal %}
                                             </div>
                                             <div class="external-link">
                                                 {% ifnotequal project.link "#" %}
-                                                    <a href="{{ project.link }}" target="_blank">
+                                                    <a href="http://{{ project.link }}" target="_blank">
                                                         <img src="{% static 'general/icons8-external-link-24.png' %}" alt="Rubber Duck">
                                                     </a>
                                                 {% endifnotequal %}
