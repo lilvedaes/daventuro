@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df888596-2f5f-477e-ae9e-9a720aa9a45f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homePage/management/commands/mysuperuser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homePage/templates/homePage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homePage/templates/homePage/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +86,7 @@
       <updated>1589568517142</updated>
       <workItem from="1589568519535" duration="42408000" />
       <workItem from="1589752731592" duration="2005000" />
-      <workItem from="1589948523927" duration="557000" />
+      <workItem from="1589948523927" duration="1273000" />
     </task>
     <servers />
   </component>
