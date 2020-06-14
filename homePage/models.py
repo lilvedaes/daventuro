@@ -28,7 +28,7 @@ class Experience(models.Model):
     company = models.CharField(max_length=200, default='')
     start_date = models.DateField('Start Date')
     end_date = models.DateField('End Date')
-    description = models.CharField(max_length=200)
+    description = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.name

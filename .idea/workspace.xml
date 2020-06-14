@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df888596-2f5f-477e-ae9e-9a720aa9a45f" name="Default Changelist" comment="" />
+    <list default="true" id="df888596-2f5f-477e-ae9e-9a720aa9a45f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homePage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/homePage/models.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +24,7 @@
   <component name="ProjectId" id="1bxKt9nWMOPTkHox30E5ku6W0rN" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/homePage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eb-virt/Scripts/activate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,7 +87,8 @@
       <workItem from="1589568519535" duration="42408000" />
       <workItem from="1589752731592" duration="2005000" />
       <workItem from="1589948523927" duration="2020000" />
-      <workItem from="1590464240359" duration="2968000" />
+      <workItem from="1590464240359" duration="4034000" />
+      <workItem from="1592174956240" duration="1717000" />
     </task>
     <servers />
   </component>
