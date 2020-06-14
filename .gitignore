@@ -6,3 +6,6 @@
 
 # ignore super user password
 homePage/management/commands/mysuperuser.py
+
+# ignore env variables
+.env
