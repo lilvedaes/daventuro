@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df888596-2f5f-477e-ae9e-9a720aa9a45f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daventuroApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/daventuroApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,7 @@
       <workItem from="1589752731592" duration="2005000" />
       <workItem from="1589948523927" duration="2020000" />
       <workItem from="1590464240359" duration="4034000" />
-      <workItem from="1592174956240" duration="3795000" />
+      <workItem from="1592174956240" duration="4475000" />
     </task>
     <servers />
   </component>
